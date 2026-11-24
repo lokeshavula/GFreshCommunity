@@ -40,6 +40,11 @@ local.properties
 node_modules/
 npm-debug.log
 yarn-error.log
+.env
+.env.local
+.expo/
+*.apk
+src/config/supabase.keys.ts
 
 # fastlane
 #

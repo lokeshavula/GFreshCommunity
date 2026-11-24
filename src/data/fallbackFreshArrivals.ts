@@ -1,0 +1,187 @@
+import { FreshArrivalItem, FreshArrivalPreset } from '../types/freshArrival';
+
+export const FRESH_ARRIVAL_PRESETS: FreshArrivalPreset[] = [
+  {
+    id: 'mangoes',
+    title: 'Fresh Alphonso Mangoes Arrived',
+    subtitle: 'Directly from Ratnagiri orchards • Naturally ripened & sweet',
+    categoryTag: 'mangoes',
+    categoryEmoji: '🥭',
+    suggestedPrice: 299,
+    unit: 'dozen',
+    badgeText: 'LIVE • JUST ARRIVED',
+    stockQuantityLabel: 'Limited 35 boxes available',
+    imageUrl:
+      'https://images.unsplash.com/photo-1553279768-865429fa0078?w=900&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 'fish',
+    title: 'Fresh Sea Pomfret Fish Received',
+    subtitle: 'Morning coastal catch • Cleaned & chilled on ice',
+    categoryTag: 'fish',
+    categoryEmoji: '🐟',
+    suggestedPrice: 450,
+    unit: '500g',
+    badgeText: 'LIVE • MORNING CATCH',
+    stockQuantityLabel: 'Only 14 kg left today',
+    imageUrl:
+      'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=900&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 'veggies',
+    title: 'Fresh Organic Vegetables Just Received',
+    subtitle: 'English cucumbers, broccoli & tender greens just unloaded',
+    categoryTag: 'veggies',
+    categoryEmoji: '🥦',
+    suggestedPrice: 65,
+    unit: '500g',
+    badgeText: 'LIVE • FARM HARVEST',
+    stockQuantityLabel: 'Harvested 3 hours ago',
+    imageUrl:
+      'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=900&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 'prawns',
+    title: 'Fresh Jumbo Tiger Prawns Stock Arrived',
+    subtitle: 'Premium ocean prawns • Cleaned, deveined & ready to cook',
+    categoryTag: 'prawns',
+    categoryEmoji: '🦐',
+    suggestedPrice: 380,
+    unit: '500g',
+    badgeText: 'LIVE • SEAFOOD SPECIAL',
+    stockQuantityLabel: 'Fresh sea batch • 18 packs',
+    imageUrl:
+      'https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=900&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 'milk',
+    title: 'Pure Desi Cow Fresh Milk & Paneer',
+    subtitle: 'Pure whole cow milk & freshly curdled malai paneer',
+    categoryTag: 'milk',
+    categoryEmoji: '🥛',
+    suggestedPrice: 42,
+    unit: '500ml',
+    badgeText: 'LIVE • MORNING MILK',
+    stockQuantityLabel: 'Fresh morning batch',
+    imageUrl:
+      'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=900&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 'leafy',
+    title: 'Fresh Palak & Methi Greens Received',
+    subtitle: 'Crisp, unwashed organic bunches straight from polyhouse',
+    categoryTag: 'leafy',
+    categoryEmoji: '🥬',
+    suggestedPrice: 30,
+    unit: 'bunch',
+    badgeText: 'LIVE • FRESH GREENS',
+    stockQuantityLabel: '40 bunches available',
+    imageUrl:
+      'https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=900&auto=format&fit=crop&q=80',
+  },
+];
+
+export const FALLBACK_FRESH_ARRIVALS: FreshArrivalItem[] = [
+  {
+    id: 'arrival-mangoes-1',
+    title: 'Fresh Alphonso Mangoes Arrived',
+    subtitle: 'Directly from Ratnagiri orchards • Sweet, aromatic & 100% naturally ripened',
+    categoryTag: 'mangoes',
+    categoryEmoji: '🥭',
+    imageUrl:
+      'https://images.unsplash.com/photo-1553279768-865429fa0078?w=900&auto=format&fit=crop&q=80',
+    price: 299,
+    unit: 'dozen',
+    productId: 'mangoes-alphonso',
+    stockQuantityLabel: 'Limited 35 boxes available',
+    badgeText: 'LIVE • JUST ARRIVED',
+    arrivedAt: new Date(Date.now() - 6 * 60 * 1000).toISOString(), // 6 mins ago
+    createdAt: new Date(Date.now() - 6 * 60 * 1000).toISOString(),
+    isActive: true,
+  },
+  {
+    id: 'arrival-fish-2',
+    title: 'Fresh Sea Pomfret Fish Received',
+    subtitle: 'Morning coastal catch • Cleaned, gutted and ice-packed for ultimate freshness',
+    categoryTag: 'fish',
+    categoryEmoji: '🐟',
+    imageUrl:
+      'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=900&auto=format&fit=crop&q=80',
+    price: 450,
+    unit: '500g',
+    productId: 'fish-pomfret',
+    stockQuantityLabel: 'Only 14 kg left today',
+    badgeText: 'LIVE • MORNING CATCH',
+    arrivedAt: new Date(Date.now() - 24 * 60 * 1000).toISOString(), // 24 mins ago
+    createdAt: new Date(Date.now() - 24 * 60 * 1000).toISOString(),
+    isActive: true,
+  },
+  {
+    id: 'arrival-veggies-3',
+    title: 'Farm Fresh Organic Vegetables',
+    subtitle: 'Crisp English cucumber, green capsicum, broccoli & tender greens just unloaded',
+    categoryTag: 'veggies',
+    categoryEmoji: '🥦',
+    imageUrl:
+      'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=900&auto=format&fit=crop&q=80',
+    price: 65,
+    unit: '500g',
+    productId: 'veg-broccoli',
+    stockQuantityLabel: 'Harvested 3 hours ago',
+    badgeText: 'LIVE • FARM HARVEST',
+    arrivedAt: new Date(Date.now() - 45 * 60 * 1000).toISOString(), // 45 mins ago
+    createdAt: new Date(Date.now() - 45 * 60 * 1000).toISOString(),
+    isActive: true,
+  },
+  {
+    id: 'arrival-prawns-4',
+    title: 'Fresh Jumbo Tiger Prawns Stock',
+    subtitle: 'Premium grade ocean prawns • Cleaned, deveined & ready to cook',
+    categoryTag: 'prawns',
+    categoryEmoji: '🦐',
+    imageUrl:
+      'https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=900&auto=format&fit=crop&q=80',
+    price: 380,
+    unit: '500g',
+    productId: 'prawns-tiger',
+    stockQuantityLabel: 'Fresh sea catch • 18 boxes',
+    badgeText: 'LIVE • SEAFOOD SPECIAL',
+    arrivedAt: new Date(Date.now() - 65 * 60 * 1000).toISOString(), // 65 mins ago
+    createdAt: new Date(Date.now() - 65 * 60 * 1000).toISOString(),
+    isActive: true,
+  },
+  {
+    id: 'arrival-milk-5',
+    title: 'Pure Desi Cow Fresh Milk & Paneer',
+    subtitle: 'Morning batch pure raw milk & soft artisan malai paneer',
+    categoryTag: 'milk',
+    categoryEmoji: '🥛',
+    imageUrl:
+      'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=900&auto=format&fit=crop&q=80',
+    price: 42,
+    unit: '500ml',
+    productId: 'dairy-milk-cow',
+    stockQuantityLabel: 'Fresh morning delivery',
+    badgeText: 'LIVE • MORNING MILK',
+    arrivedAt: new Date(Date.now() - 90 * 60 * 1000).toISOString(), // 90 mins ago
+    createdAt: new Date(Date.now() - 90 * 60 * 1000).toISOString(),
+    isActive: true,
+  },
+  {
+    id: 'arrival-leafy-6',
+    title: 'Tender Spinach & Methi Bunches',
+    subtitle: 'Hydroponic green leaves loaded with iron & vitamins',
+    categoryTag: 'leafy',
+    categoryEmoji: '🥬',
+    imageUrl:
+      'https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=900&auto=format&fit=crop&q=80',
+    price: 30,
+    unit: 'bunch',
+    productId: 'veg-palak',
+    stockQuantityLabel: '30 bunches in stock',
+    badgeText: 'LIVE • CRISP GREENS',
+    arrivedAt: new Date(Date.now() - 130 * 60 * 1000).toISOString(),
+    createdAt: new Date(Date.now() - 130 * 60 * 1000).toISOString(),
+    isActive: true,
+  },
+];
